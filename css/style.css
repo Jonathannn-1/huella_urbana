@@ -1,0 +1,31 @@
+body{
+    background-color: aliceblue;
+    color: blue;
+}
+
+header{
+    background-color: green;
+
+}
+
+p{
+    font-size: 20pt;
+}
+
+#slogan{
+    color: blueviolet;
+    font-size: 30pt;
+}
+
+.parrafo{
+    background-color: chartreuse;
+}
+
+/* se aplica de manera genaral a todas las equitas img */
+img{
+    width: 300px;
+    height: 300px;
+}
+/* 
+la estructura jerarquica, se aplica primero, por id, clases y despues etiquetas */
+
