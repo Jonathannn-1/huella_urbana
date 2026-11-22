@@ -10,7 +10,8 @@
 
 body{
     background-color: var(--cielo);
-    background-image: url(../imagenes/guarderia.jpg); /* img de fondo */
+    /* img de fondo */
+    /*background-image: url(../imagenes/guarderia.jpg);*/ 
     color: var(--azulfuerte);
     margin: auto;
 }
@@ -58,6 +59,42 @@ img{
     text-align: center;
 }
 
+#Inicio img{
+    width: 500px;
+    height: 600px;
+    border-radius: 30px;
+}
+
+#titulo{
+    font-size: 4rem;
+}
+
+h1,h2,h3{
+    color: var(--verde);
+    font-family: "Shantell Sans", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "BNCE" 0,
+        "INFM" 0,
+        "SPAC" 0;
+}
+
+article{
+    background-color: var(--blanco);
+    padding: 20px 100px;
+    margin: 30px;
+    border: 2px solid var(--verde);
+    border-radius: 15px;
+}
+
+article img {
+    border-radius: 15px;
+    height: 500px;
+}
+
+
 .Boton{
     display: inline-block;
     background-color: var(--naranja);
@@ -77,6 +114,7 @@ img{
 }
 
 .Boton:hover{
+    background-color: var(--cielo);
     color: var(--verde);
 }
 
@@ -84,7 +122,7 @@ p{
     font-size: 20pt;
 }
 
-#slogan{
+/* #slogan{
     color: blueviolet;
     font-size: 30pt;
 }
@@ -92,6 +130,8 @@ p{
 .parrafo{
     background-color: chartreuse;
 }
+ */
+
 
 /* se aplica de manera genaral a todas las equitas img */
 img{
@@ -101,3 +141,7 @@ img{
 /* 
 la estructura jerarquica, se aplica primero, por id, clases y despues etiquetas */
 
+#Servicios article img{
+    width: 500px;
+    height: 500px;
+}

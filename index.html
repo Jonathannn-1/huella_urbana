@@ -16,11 +16,11 @@
         <img src="imagenes/logo.png" alt="Logo">
         <nav>
             <ul>
-                <li><a href="#Inicio">Inicio</a></li>
-                <li><a href="#Servicios">Servicios</a></li>
-                <li><a href="#Planes">Planes</a></li>
-                <li><a href="#Paseadores">Paseadores</a></li>
-                <li><a href="#Contactos">Contactos</a></li>
+                <li><a href="#Inicio" class="Boton">Inicio</a></li>
+                <li><a href="#Servicios" class="Boton">Servicios</a></li>
+                <li><a href="#Planes" class="Boton">Planes</a></li>
+                <li><a href="#Paseadores" class="Boton">Paseadores</a></li>
+                <li><a href="#Contactos" class="Boton">Contactos</a></li>
             </ul>
         </nav>
     </header>
@@ -28,10 +28,23 @@
     <main>
         <!-- aqui estamos usando un identidicador(id) para usarlo desde css o js, esto se debera llamar siempre desde el numeral -->
         <section id="Inicio"> 
-            <h1>Huella Urbana</h1>
+            <h1 id="titulo">Huella Urbana</h1>
             <p id="slogan">Paseos seguros y felices para tu mascota, mientras tu cumples con tu dia.</p>
-            <a href="#Contactos" class="Boton">Agenda un paseo</a>
+            <a href="#Contactos" class="Boton">Agenda un paseo</a><br>
             <img src="imagenes/principal.jpg" alt="Paseo de mascota">
+        </section>
+
+        <section id="video">
+            <iframe
+            width="517"
+            height="919"
+            src="https://www.youtube.com/embed/yW0X768RrDs"
+            title="Paseo e instrucciones a la hora de pasear a tu canino"
+            style="border: 0;"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            loading="lazy">
+            </iframe>
         </section>
 
         <section id="Servicios">

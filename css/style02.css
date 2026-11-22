@@ -1,0 +1,35 @@
+
+/* modelo de cajas */
+
+/* selector de tipo etiqueta */
+body{
+    background-color: beige;
+    color: darkblue;
+}
+
+header{
+    background-color: green;
+}
+
+p{
+    font-size: 20pt;
+}
+
+/* selector de tipo ID */
+#slogan{
+    color: red;
+    font-size: 30pt;
+}
+
+/* clase agrypar varios elementos en ese mismo nombre */
+
+.parrafo{
+    background-color: green;
+}
+
+/* cambio de img en todas las img */
+/* esta es una manera de darle una estructira fija a imagenes --#Servicios article img  --- */
+img{
+    width: 300px;
+    height: 300px;
+}
