@@ -6,6 +6,16 @@
     --azulfuerte: #0B3D91;
     --blanco: #FFFFFF;
     --negro: #000000;
+
+    /* fuente decorativa reutilizable */
+    --fuente-titulos: "Shantell Sans", cursive;
+}
+
+/* evita que el padding y el borde agranden las cajas */
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
 }
 
 body{
@@ -13,22 +23,27 @@ body{
     /* img de fondo */
     /*background-image: url(../imagenes/guarderia.jpg);*/ 
     color: var(--azulfuerte);
-    margin: auto;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
 }
 
 header{
     background-color: var(--verde);
-
+    padding: 10px 20px;
 }
 
 header img{
     width: 300px;
-    height: 200;
+    height: 200px;
+    object-fit: cover;
 }
 
 nav ul{
     list-style: none;
     text-align: right;
+    margin: 0;
+    padding: 0;
 }
 
 nav li{
@@ -39,7 +54,7 @@ nav li{
 nav a{
     color: var(--blanco);
     text-decoration: none;
-    font-family: "Shantell Sans", cursive;
+    font-family: var(--fuente-titulos);
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -47,6 +62,11 @@ nav a{
         "BNCE" 0,
         "INFM" 0,
         "SPAC" 0;
+}
+
+nav a:hover,
+nav a:focus{
+    color: var(--naranja);
 }
 
 /* modificamos maximo de ancho de la pantalla */
@@ -62,16 +82,18 @@ img{
 #Inicio img{
     width: 500px;
     height: 600px;
+    object-fit: cover;
     border-radius: 30px;
 }
 
 #titulo{
-    font-size: 4rem;
+    /* se adapta al tamaño de pantalla: minimo 2.5rem, maximo 4rem */
+    font-size: clamp(2.5rem, 8vw, 4rem);
 }
 
 h1,h2,h3{
     color: var(--verde);
-    font-family: "Shantell Sans", cursive;
+    font-family: var(--fuente-titulos);
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -81,9 +103,15 @@ h1,h2,h3{
         "SPAC" 0;
 }
 
+/* los titulos siempre deben ser mas grandes que los parrafos */
+h1{ font-size: 2.5rem; }
+h2{ font-size: 2rem; }
+h3{ font-size: 1.6rem; }
+
 article{
     background-color: var(--blanco);
-    padding: 20px 100px;
+    /* en pantallas pequeñas el padding baja, en grandes llega a 100px */
+    padding: 20px clamp(20px, 5vw, 100px);
     margin: 30px;
     border: 2px solid var(--verde);
     border-radius: 15px;
@@ -92,6 +120,7 @@ article{
 article img {
     border-radius: 15px;
     height: 500px;
+    object-fit: cover;
 }
 
 
@@ -99,11 +128,11 @@ article img {
     display: inline-block;
     background-color: var(--naranja);
     color: var(--azulfuerte);
-    padding: 12px;
+    padding: 12px 24px;
     margin: 20px 0;
     border-radius: 30px;
     text-decoration: none;
-    font-family: "Shantell Sans", cursive;
+    font-family: var(--fuente-titulos);
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -111,15 +140,17 @@ article img {
         "BNCE" 0,
         "INFM" 0,
         "SPAC" 0;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.Boton:hover{
+.Boton:hover,
+.Boton:focus{
     background-color: var(--cielo);
     color: var(--verde);
 }
 
 p{
-    font-size: 20pt;
+    font-size: 1.1rem;
 }
 
 /* #slogan{
@@ -137,6 +168,7 @@ p{
 img{
     width: 300px;
     height: 300px;
+    object-fit: cover;
 }
 /* 
 la estructura jerarquica, se aplica primero, por id, clases y despues etiquetas */
@@ -144,4 +176,33 @@ la estructura jerarquica, se aplica primero, por id, clases y despues etiquetas 
 #Servicios article img{
     width: 500px;
     height: 500px;
+}
+
+/* ===== Responsive: tablets y celulares ===== */
+@media (max-width: 768px){
+
+    header img{
+        width: 200px;
+        height: auto;
+    }
+
+    nav ul{
+        text-align: center;
+    }
+
+    nav li{
+        margin: 5px 10px;
+    }
+
+    #Inicio img,
+    #Servicios article img,
+    article img{
+        width: 100%;
+        height: auto;
+        max-height: 400px;
+    }
+
+    article{
+        margin: 15px;
+    }
 }
